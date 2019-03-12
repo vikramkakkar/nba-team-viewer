@@ -1,6 +1,18 @@
 package com.appeaser.nbateamviewer
 
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import okhttp3.mockwebserver.MockResponse
+import kotlin.random.Random
+
+val gson = Gson()
+
+fun random500Error() = Random.nextInt(500, 599)
+fun random400Error() = Random.nextInt(400, 499)
+
+inline fun <reified T> fromJson(body: String): T {
+    return gson.fromJson(body, object : TypeToken<T>() {}.type)
+}
 
 fun createResponse(responseCode: Int, body: String): MockResponse {
     return MockResponse().apply {

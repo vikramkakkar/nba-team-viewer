@@ -1,10 +1,9 @@
-package com.appeaser.nbateamviewer.data
+package com.appeaser.nbateamviewer.domain.data
 
 import androidx.test.core.app.ApplicationProvider
 import com.appeaser.nbateamviewer.SUCCESS_RESPONSE_BODY
 import com.appeaser.nbateamviewer.TeamViewerApp
 import com.appeaser.nbateamviewer.createResponse
-import com.appeaser.nbateamviewer.domain.data.TeamViewerRepositoryImpl
 import com.appeaser.nbateamviewer.external.network.HttpGateway
 import okhttp3.Cache
 import okhttp3.mockwebserver.MockWebServer
