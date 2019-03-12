@@ -42,6 +42,7 @@ interface HttpGateway {
             cache: Cache?
         ): HttpGateway {
             val httpClient = OkHttpClient.Builder()
+                // network caching
                 .cache(cache)
                 .connectTimeout(timeout, timeoutUnit)
                 .readTimeout(timeout, timeoutUnit)
