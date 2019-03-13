@@ -1,5 +1,7 @@
 package com.appeaser.nbateamviewer
 
+import com.appeaser.nbateamviewer.domain.entity.Player
+import com.appeaser.nbateamviewer.domain.entity.Team
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.mockwebserver.MockResponse
@@ -20,6 +22,11 @@ fun createResponse(responseCode: Int, body: String): MockResponse {
         setBody(body)
     }
 }
+
+val TEST_TEAM = Team(
+    1, "Boston Celtics", 45, 20,
+    listOf(Player(37729, "Kadeem", "Allen", "SG", 45))
+)
 
 val SUCCESS_RESPONSE_BODY = """
     [
