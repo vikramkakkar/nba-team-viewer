@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">NBA Team Viewer</string>
+    <string name="connection_issue_error_message">There seems to be an issue with the network connection. Please check the connection, or try again later.</string>
+    <string name="http_failure_error_message">We were unable to fetch the team data. Please try again later.</string>
+    <string name="generic_error_message">Something went wrong. Please try again later.</string>
+    <string name="text_wins">WINS: %3d</string>
+    <string name="text_losses">LOSSES: %3d</string>
+    <string name="content_description_error_icon">error icon</string>
+
+    <!-- Team List options menu -->
+    <string name="menu_title_sort">Sorting options</string>
+    <string name="menu_title_sort_alphabetically">Sort alphabetically</string>
+    <string name="menu_title_sort_by_wins">Sort by wins</string>
+    <string name="menu_title_sort_by_losses">Sort by losses</string>
+    <string name="menu_title_sort_asc">Sort ascending</string>
+    <string name="menu_title_sort_desc">Sort descending</string>
 </resources>

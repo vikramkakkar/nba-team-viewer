@@ -20,8 +20,9 @@ class TeamListPresenter(
     // default sorting order
     private var sortBy = SortBy.ALPHABETICAL_ASC
 
-    override fun attachView(view: TeamListContract.View) {
+    override fun attachView(view: TeamListContract.View, sortByFromState: SortBy?) {
         teamListView = view
+        sortByFromState?.apply { sortBy = this }
         loadTeamList()
     }
 
@@ -102,6 +103,8 @@ class TeamListPresenter(
             else /* [GenericException] + unhandled exceptions */ -> teamListView.showGenericErrorMessage()
         }
     }
+
+    override fun getCurrentSortByPreference() = sortBy
 
     override fun detachView() {
         disposable?.dispose()

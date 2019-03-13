@@ -135,7 +135,7 @@ class GetAllTeamsUseCaseImplTest {
 
         useCase.execute().test()
 
-        assertEquals(RETRY_COUNT + 1L /* original call */, server.requestCount.toLong())
+        assertEquals(RETRY_COUNT, server.requestCount.toLong())
     }
 
     @Test
@@ -151,7 +151,7 @@ class GetAllTeamsUseCaseImplTest {
 
         useCase.execute().test()
 
-        assertEquals(1L /* original call & no retries */, server.requestCount.toLong())
+        assertEquals(1 /* original call & no retries */, server.requestCount)
     }
 
     @Test
@@ -175,8 +175,8 @@ class GetAllTeamsUseCaseImplTest {
     ): GetAllTeamsUseCaseImpl {
         val gateway = HttpGateway.build(
             baseUrl = baseUrl,
-            timeout = 5L,
-            timeoutUnit = TimeUnit.MILLISECONDS,
+            timeout = 1L,
+            timeoutUnit = TimeUnit.SECONDS,
             cache = null
         )
 

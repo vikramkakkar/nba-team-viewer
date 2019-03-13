@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TeamListActivity -->
+    <dimen name="team_list_view_margin_from_parent">16dp</dimen>
+    <dimen name="team_list_view_margin_from_siblings">8dp</dimen>
+    <dimen name="error_view_margin">16dp</dimen>
+    <dimen name="error_text_margin_top">24dp</dimen>
+</resources>

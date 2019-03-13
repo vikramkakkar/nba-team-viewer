@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/sort"
+        android:icon="@drawable/ic_sort"
+        android:title="@string/menu_title_sort"
+        app:showAsAction="always">
+
+        <menu>
+
+            <!-- Alphabetically -->
+
+            <item
+                android:id="@+id/sort_alphabetically"
+                android:title="@string/menu_title_sort_alphabetically">
+
+                <menu>
+
+                    <item
+                        android:id="@+id/sort_alphabetically_asc"
+                        android:title="@string/menu_title_sort_asc" />
+
+                    <item
+                        android:id="@+id/sort_alphabetically_desc"
+                        android:title="@string/menu_title_sort_desc" />
+
+                </menu>
+
+            </item>
+
+            <!-- By Wins -->
+
+            <item
+                android:id="@+id/sort_by_wins"
+                android:title="@string/menu_title_sort_by_wins">
+
+                <menu>
+
+                    <item
+                        android:id="@+id/sort_by_wins_asc"
+                        android:title="@string/menu_title_sort_asc" />
+
+                    <item
+                        android:id="@+id/sort_by_wins_desc"
+                        android:title="@string/menu_title_sort_desc" />
+
+                </menu>
+
+            </item>
+
+            <!-- By Losses -->
+
+            <item
+                android:id="@+id/sort_by_losses"
+                android:title="@string/menu_title_sort_by_losses">
+
+                <menu>
+
+                    <item
+                        android:id="@+id/sort_by_losses_asc"
+                        android:title="@string/menu_title_sort_asc" />
+
+                    <item
+                        android:id="@+id/sort_by_losses_desc"
+                        android:title="@string/menu_title_sort_desc" />
+
+                </menu>
+
+            </item>
+
+        </menu>
+
+    </item>
+
+</menu>

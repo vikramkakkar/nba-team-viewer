@@ -260,6 +260,21 @@ class TeamListPresenterTest {
         assertEquals(sortedByWinsAsc, argCaptor.lastValue)
     }
 
+    @Test
+    fun `sort by passed while attaching`() {
+        val sortByPreference = SortBy.WINS_ASC
+
+        presenter.attachView(view, sortByPreference)
+        getAllTeamsUseCase.respondWithSuccess(unsortedTeamList)
+
+        val argCaptor = argumentCaptor<List<Team>>()
+        verify(view).showTeams(argCaptor.capture())
+
+        val sortedByWinsAsc = unsortedTeamList.sortedBy { it.wins }
+
+        assertEquals(sortedByWinsAsc, argCaptor.lastValue)
+    }
+
     private val unsortedTeamList = listOf(
         Team(1, "z", 50, 25, listOf()),
         Team(2, "o", 100, 75, listOf()),

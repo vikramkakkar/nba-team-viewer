@@ -22,9 +22,11 @@ interface TeamListContract {
 
     interface Presenter {
 
-        fun attachView(view: View)
+        fun attachView(view: View, sortByFromState: SortBy? = null)
 
         fun sortTeamListBy(newSortBy: SortBy)
+
+        fun getCurrentSortByPreference(): SortBy
 
         fun detachView()
     }

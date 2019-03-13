@@ -49,6 +49,7 @@ interface HttpGateway {
                 .writeTimeout(timeout, timeoutUnit)
                 .addLoggingInterceptor()
                 .cache(cache)
+                .retryOnConnectionFailure(false)
                 .build()
 
             return Retrofit.Builder()

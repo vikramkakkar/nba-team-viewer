@@ -59,8 +59,8 @@ class TeamViewerRepositoryImplTest {
     private fun createRepository(cache: Cache? = null): TeamViewerRepositoryImpl {
         val gateway = HttpGateway.build(
             baseUrl = server.url("/").toString(),
-            timeout = 5L,
-            timeoutUnit = TimeUnit.MILLISECONDS,
+            timeout = 1L,
+            timeoutUnit = TimeUnit.SECONDS,
             cache = cache
         )
 
