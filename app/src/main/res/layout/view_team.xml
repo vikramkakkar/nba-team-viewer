@@ -10,10 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/team_list_view_margin_from_parent"
-        android:layout_marginLeft="@dimen/team_list_view_margin_from_parent"
         android:layout_marginTop="@dimen/team_list_view_margin_from_parent"
         android:layout_marginEnd="@dimen/team_list_view_margin_from_parent"
-        android:layout_marginRight="@dimen/team_list_view_margin_from_parent"
         android:layout_marginBottom="@dimen/team_list_view_margin_from_siblings"
         android:textAppearance="?attr/textAppearanceSubtitle1"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +34,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/team_list_view_margin_from_siblings"
         android:layout_marginEnd="@dimen/team_list_view_margin_from_parent"
-        android:layout_marginRight="@dimen/team_list_view_margin_from_parent"
         android:textAppearance="?attr/textAppearanceCaption"
         app:layout_constraintBottom_toBottomOf="@id/tv_wins"
         app:layout_constraintEnd_toEndOf="parent" />

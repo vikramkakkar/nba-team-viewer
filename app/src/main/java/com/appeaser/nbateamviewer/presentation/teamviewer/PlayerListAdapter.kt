@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.getColor
-import androidx.core.view.ViewCompat.setBackground
 import androidx.recyclerview.widget.RecyclerView
 import com.appeaser.nbateamviewer.R
 import com.appeaser.nbateamviewer.domain.entity.Player
@@ -35,7 +34,7 @@ class PlayerListAdapter : RecyclerView.Adapter<PlayerListAdapter.PlayerViewHolde
     class PlayerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         init {
-            setBackground(itemView.tv_player_number, PlayerNumberBg(getColor(view.context, R.color.colorPrimary)))
+            itemView.tv_player_number.background = PlayerNumberBg(getColor(view.context, R.color.colorPrimary))
         }
 
         fun bindPlayer(player: Player) {

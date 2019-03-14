@@ -8,9 +8,10 @@
     <dimen name="error_text_margin_top">24dp</dimen>
 
     <!-- TeamViewerActivity -->
-    <dimen name="team_viewer_wins_losses_padding_start_end">16dp</dimen>
+    <dimen name="team_viewer_wins_losses_padding_start_end">20dp</dimen>
     <dimen name="team_viewer_wins_losses_padding_top_bottom">12dp</dimen>
-    <dimen name="player_margin_from_parent">16dp</dimen>
-    <dimen name="player_number_guideline_begin">64dp</dimen>
+    <dimen name="player_number_guideline_begin">72dp</dimen>
+    <dimen name="player_number_margin_top_bottom">16dp</dimen>
+    <dimen name="player_position_margin_start_end">20dp</dimen>
 
 </resources>
