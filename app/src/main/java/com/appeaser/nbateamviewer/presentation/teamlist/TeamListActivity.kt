@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.appeaser.nbateamviewer.R
 import com.appeaser.nbateamviewer.domain.entity.SortBy
 import com.appeaser.nbateamviewer.domain.entity.Team
+import com.appeaser.nbateamviewer.presentation.teamviewer.TeamViewerActivity
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.act_team_list.*
 import javax.inject.Inject
@@ -24,7 +25,7 @@ class TeamListActivity : AppCompatActivity(), TeamListContract.View {
     lateinit var presenter: TeamListContract.Presenter
 
     private val teamListAdapter = TeamListAdapter { team ->
-        // TODO: launch team viewer act
+        startActivity(TeamViewerActivity.launch(this@TeamListActivity, team.id))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -111,6 +112,8 @@ class TeamListActivity : AppCompatActivity(), TeamListContract.View {
 
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
+
+        // preserver the sorting preference across orientation changes
         outState?.putSerializable(KEY_SORT_BY, presenter.getCurrentSortByPreference())
     }
 

@@ -4,6 +4,8 @@ import com.appeaser.nbateamviewer.domain.data.TeamViewerRepository
 import com.appeaser.nbateamviewer.domain.data.TeamViewerRepositoryImpl
 import com.appeaser.nbateamviewer.domain.usecase.GetAllTeamsUseCase
 import com.appeaser.nbateamviewer.domain.usecase.GetAllTeamsUseCaseImpl
+import com.appeaser.nbateamviewer.domain.usecase.GetTeamByIdUseCase
+import com.appeaser.nbateamviewer.domain.usecase.GetTeamByIdUseCaseImpl
 import com.appeaser.nbateamviewer.external.network.HttpGateway
 import dagger.Module
 import dagger.Provides
@@ -30,5 +32,11 @@ class TeamViewerAppModule {
     @Provides
     fun getAllTeamsUseCase(teamViewerRepository: TeamViewerRepository): GetAllTeamsUseCase {
         return GetAllTeamsUseCaseImpl(teamViewerRepository)
+    }
+
+    @ApplicationScope
+    @Provides
+    fun getTeamByIdUseCase(teamViewerRepository: TeamViewerRepository): GetTeamByIdUseCase {
+        return GetTeamByIdUseCaseImpl(teamViewerRepository)
     }
 }

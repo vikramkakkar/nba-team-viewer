@@ -111,6 +111,6 @@ class TeamListPresenter(
     }
 
     companion object {
-        private const val TAG = "TeamListPresenter"
+        private const val TAG = "[TeamListPresenter]"
     }
 }

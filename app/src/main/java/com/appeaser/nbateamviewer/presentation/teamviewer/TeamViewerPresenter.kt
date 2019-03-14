@@ -53,6 +53,6 @@ class TeamViewerPresenter(
     }
 
     companion object {
-        private const val TAG = "TeamViewerPresenter"
+        private const val TAG = "[TeamViewerPresenter]"
     }
 }

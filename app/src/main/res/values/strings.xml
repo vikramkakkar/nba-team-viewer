@@ -14,4 +14,9 @@
     <string name="menu_title_sort_by_losses">Sort by losses</string>
     <string name="menu_title_sort_asc">Sort ascending</string>
     <string name="menu_title_sort_desc">Sort descending</string>
+
+    <string name="team_not_found_error_message">Error: Team not found</string>
+    <string name="player_name">%1$s %2$s</string>
+    <string name="player_number">%d</string>
+    <string name="player_position">%4s</string>
 </resources>

@@ -174,7 +174,7 @@ class TeamListActivityTest {
 
             // progress bar's animated drawable causes issues with espresso - replace it with a static drawable
             rule.activity.findViewById<ProgressBar>(R.id.loading_view).apply {
-                indeterminateDrawable = rule.activity.getDrawable(R.drawable.ic_launcher_foreground)
+                indeterminateDrawable = rule.activity.getDrawable(R.drawable.ic_sort)
             }
         }
 
